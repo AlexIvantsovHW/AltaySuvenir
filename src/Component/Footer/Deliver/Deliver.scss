@@ -1,0 +1,46 @@
+@import '../../../Common/style/style.scss';
+
+.Deliver{
+  @extend %page-puttern;
+}
+.deliverContainer{
+    background-color: rgba(5, 5, 5, 0.77);
+    box-shadow: 1px 1px 4px rgba(128, 128, 128, 0.277);
+    text-shadow: 0 1px 0 #333333;
+    border: solid rgba(128, 128, 128, 0);
+    border-radius: 50px;
+    position: relative;
+    display: grid; 
+    grid-template-columns: 1fr;
+    width: 70%;
+    height: 90%; 
+    font-family:$ff;
+
+    .deliverText{ 
+      margin:auto;
+      background-color: #33333398;
+      color: $fc;
+      user-select: none;
+      font-family:$ff;
+      height: 90%; 
+      text-align: center;
+      display: grid;
+      grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+      width: 90%;
+      border-radius: 5%;
+      h4{font-size: $head_fz;}
+      h1{font-size: $h1_fz;};
+      h2{font-size: $h2_fz;};
+      h3{font-size: $h3_fz;};
+      .subText{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: justify;
+         margin-left: 5%;
+         .subText_2 h2{font-size: $h2_fz; font-weight: lighter;
+          span{font-weight: bold;}}
+      }
+      a {color: $fc;font-weight: bold;font-style: italic;}
+      }
+}

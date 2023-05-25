@@ -1,0 +1,95 @@
+@import '../../Common/style/style.scss';
+
+// top margin for header
+$tmrgn:150px;
+// Font size
+$card-s:150px;
+
+// color
+$border:black;
+$buttonBG:rgb(86, 85, 85);
+$BG:gray;
+//Paterns
+
+%button{
+  button {
+    background-color: $buttonBG;
+    font-size: $h1_fz;
+    width: 100px;
+    height: 50px;
+    border-bottom: solid 0.5px $BG;
+    border-top: solid 0.5px $BG;
+  }
+  & button:hover{background-color: red;}
+}
+
+.Product{
+  position: fixed;
+  display: grid;
+  height: $BodyH;
+  width: 100%;
+  top: $HeaderH;
+    .productContainer{ 
+      margin: auto;
+      height: 90%;
+      border: solid rgba(128, 128, 128, 0);
+      border-radius: 50px;
+      position: relative;
+      width: 70%;
+      display: flex; 
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgba(5, 5, 5, 0.77);
+      box-shadow: 1px 1px 4px rgba(128, 128, 128, 0.277);}
+    
+    .card{
+      position: relative;
+      margin:5%;
+      width: 160px;
+      height: 160px;
+      perspective: 1000px;
+      -webkit-transition: 500ms ease-in; /* Safari and Chrome */
+      -moz-transition: 500ms ease-in; /* Firefox 4 */
+      -o-transition: 500ms ease-in;
+  
+    } 
+    .front, .back { 
+      border: solid 0.5px rgba(128, 128, 128, 0);
+      border-radius: 20px;
+      background-color: #a3a1a17a;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-size: $h1_fz;
+      font-weight: bold;
+      color: rgb(255, 208, 0);
+      text-shadow: 1px 1px 1px #000;
+      transition: 1s;
+      backface-visibility: hidden;
+     }
+
+    .front img {
+      max-width: $card-s;
+      height: $card-s;
+      filter: drop-shadow(0 0 10px rgb(6, 6, 6));
+      filter: brightness(120%);
+    }
+    .back {
+      transform: rotateY(180deg);
+
+    }
+    .card:hover .front {
+      transform: rotateY(180deg);}
+    .card:hover .back {border-left: solid 0.5px rgba(128, 128, 128, 0);
+      border-radius: 20px;
+      background-color: #ffffff;
+      transform: rotateY(360deg);}
+      
+}

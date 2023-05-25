@@ -1,0 +1,7 @@
+.Pay {
+  position: fixed;
+  top: 150px;
+  width: 100%;
+  height: calc(100vh - 150px - 130px);
+  background-color: green;
+}/*# sourceMappingURL=Pay.css.map */

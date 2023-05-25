@@ -1,0 +1,242 @@
+//
+$HeaderH:100px;
+$FooterH:50px;
+$BodyH:calc(100vh - $HeaderH - $FooterH);
+
+
+
+// PageWidth
+$PgWh:70%;
+// top margin for header
+$tmrgn:100px;
+// Font size
+$pfz:10px;
+$head_fz:35px;
+$h1_fz:20px;
+$h2_fz:15px;
+$h3_fz:10px;
+$h4_fz:8px;
+
+// Font family
+$ff:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+// color
+$border:rgba(255, 255, 255, 0.656);
+$buttonBG:rgba(0, 12, 245, 0);
+$buttonBGHover:rgba(255, 255, 255, 0.407);
+$BG_H:rgba(91, 91, 91, 0.422);
+$BG_F:rgba(91, 91, 91, 0.432);
+$fc:white;
+// Patterns
+$dropshadow:rgba(0, 246, 0, 0.684);
+$duration:500ms; 
+%transition{
+  -webkit-transition: $duration ease-in; /* Safari and Chrome */
+  -moz-transition: $duration ease-in; /* Firefox 4 */
+  -o-transition: $duration ease-in;
+}
+%drowBox-pattern{
+@extend %transition;
+  img,button{  
+    @extend %transition;}
+  &:hover{
+      transition: $duration ease-in;
+      filter: drop-shadow(0 0 2px $dropshadow)}
+}
+%imgSetting{
+  z-index:100;
+  opacity: 100%;
+}
+// Button pattern
+%button{
+  .btn button{
+  width: 150px;
+  height: 42px;
+  border-left: solid 2px $border;
+	border-right: solid 2px $border;
+  border-top: none;
+  border-bottom: none;
+  background: $buttonBG;
+	color: #ffffff;
+	padding: auto;
+	font-size: $h1_fz;
+	position: relative;
+	box-sizing: border-box;
+	transition: all calc($duration/2) ease; 
+  -webkit-text-stroke: 0.2px black;
+  font-weight: bold;
+  }
+  .btn  button:before {
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 42px;
+    background: $buttonBGHover;
+    transition: all $duration*2 ease;
+  }
+  .btn  button:after {
+    content:'';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 42px;
+    background:$buttonBGHover;
+    transition: all $duration*2 ease;
+  }
+
+  .btn button:hover:before,.btn button:hover::after {width: 50%;}
+  .btn button:hover{border: none rgba(255, 0, 0, 0);transition: all calc($duration/2) ease;}
+  }
+
+// Page pattern
+%page-puttern{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: $HeaderH;
+  width: 100%;
+  height: $BodyH;  
+}
+
+:root {
+  --h1-fsz:25px;
+  --h2-fsz:18px;
+  --h3-fsz:16px;
+  --p-fsz:14px;
+  --bh-color:rgba(149, 147, 147, 0.49);
+  --f-color:white;
+}
+
+$logoFS:70px;
+
+.container {
+  background-size: cover;
+  background-repeat: no-repeat;
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    place-content: center;
+}
+    // _______________Header_________________
+
+.header{
+  display: grid;
+  grid-template-columns: 0.5fr 4fr;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: $HeaderH;
+  z-index: 10;
+  font-size: $pfz;
+  color: black;
+  background-color: $BG_H;
+
+  .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: $HeaderH;
+    img{
+      @extend %imgSetting;
+      width: 100px;
+      height: 100px;
+    }
+    .logoImg  img{
+      @extend %imgSetting;
+      width: 100px;
+      height: 100px;
+    }
+    .logoImg  img:hover{
+      @extend %transition;
+     filter: drop-shadow(0 0 10px black);
+     transition: $duration ease-in;
+    }
+    .logoImg{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 2.5%;
+      width: 250px;
+      height: $HeaderH;
+  }
+}
+}
+
+.head_menu{
+display: flex;
+justify-content: space-around;
+align-items: center;
+width: 100%;
+height: 100%;
+.menu_container{
+  @extend %button;
+  margin:0 10%;
+  width: 100px;
+  height: 50px;
+}
+
+}
+
+  // _______________Body_________________
+  .Body{
+    position: fixed;
+    top: $tmrgn;
+    display: grid;
+    width: 100vw;
+    min-height:$BodyH;
+
+    .BodyContainer{
+      position: fixed;
+      display: grid;
+      width: 100vw;
+      
+      min-height:$BodyH;
+      .containerText{margin-top:0%; text-align: center;text-shadow: 1px 1px 1px #000;}
+      .containerText h1{font-size:$logoFS; color: white; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ }
+  
+    }
+      }
+
+
+    // _______________Footer_________________
+
+    .Footer{
+      display: flex;
+      justify-content: space-between;
+      position: fixed;
+      color: $fc;
+      width: 100vw;
+      height: $FooterH;
+      bottom: 0;
+      left: 0;
+      background-color:rgba(255, 255, 255, 0);
+      .footer_menu{
+        border: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: auto;
+        width: 100px;
+        height: 100%;
+          h1{font-size:$h2_fz ;}
+          a {text-decoration: none;}
+          span{
+            font-size: $h3_fz;        
+            font-style: italic;
+            cursor: pointer;
+            text-decoration: none;
+            color:$fc;
+          
+          }
+
+            img {margin: auto; width:40px;height: 40px;@extend %transition;filter: brightness(80%);}
+             img:hover{ width: 45px;height: 45px;filter: brightness(120%);}
+        }
+      }
+    
