@@ -7,14 +7,7 @@ import { render } from '@testing-library/react';
 
 
 class Product extends React.Component{
-  componentDidMount() {
-    debugger;
-    console.log('component did mount')
-  }
-  componentWillUnmount() {
-    debugger;
-    console.log('component will unmount')
-  }
+ 
    render(){
     return(
       <div className="Product"> 

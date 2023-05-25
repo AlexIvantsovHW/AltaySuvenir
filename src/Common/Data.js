@@ -72,7 +72,7 @@ export let Buben=[
 export let bubenDict=['buben_1','buben_2','buben_3']
 // Комусы
 export let Comus=[ 
-    {
+    {   
     Comus_1:{
         name:'Комус',
         articul:'MC1',
@@ -80,11 +80,9 @@ export let Comus=[
         price:2000,
         img:'https://i.postimg.cc/KYdr94j2/Camus1.png',
         },
-
-   
 }]
 
-export let ComusDict=['Comus_1']
+export let ComusDict=['Comus_1','Comus_2']
 
 // Флейты
 export let Shum=[ 

@@ -1,13 +1,13 @@
 
 const SET_IMG='SET_IMG'
 const SET_MODULE='SET_MODULE'
-
+const SET_STATE='SET_STATE'
 
 
 let initialState = {
   current_img:0,
   current_module:'Бубны',
-  buben: {
+  State: {
     buben_1:{
         name:'Бубен (Наскальные рисунки)',
         Desc:'Бубен-это ударный музыкальный инструмент, состоящий из кожаной мембраны, натянутой на деревянный обод. К некоторым разновидностям бубнов подвешены металлические колокольчики, которые начинают звенеть, когда исполнитель ударяет по мембране бубна, потирает её или встряхивает весь инструмент. Все бубны, представленные в Домике Шамана выполнены из кожи марала и украшены национальными рисунками Горного-Алтая.',
@@ -45,12 +45,13 @@ let initialState = {
 const ProductReducer = (state = initialState, action) => {
   switch (action.type) {
     case SET_IMG: return { ...state,  current_img:action.Img}; 
-    case SET_MODULE:debugger;return { ...state,  current_module:action.module}; 
+    case SET_MODULE:debugger;return { ...state,State:action.state, current_module:action.module,current_img:0}; 
+    case SET_STATE:debugger;return { ...state,state:action.state};
     default:return { ...state };
   }
 };
 
 export const ImgAC=(Img)=>{return{type: SET_IMG,Img }};
-export const moduleAC=(module)=>{debugger;return{type:SET_MODULE,module}}
-
+export const moduleAC=(module,state)=>{debugger;return{type:SET_MODULE,module,state}}
+export const stateAC=(state)=>{{debugger;return{type:SET_STATE,state}}}
 export default ProductReducer;

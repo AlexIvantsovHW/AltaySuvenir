@@ -1,13 +1,12 @@
 import React from "react";
 import { connect } from "react-redux";
 import Music from "./Music";
-import { ImgAC,moduleAC } from "../../../redux/product-reducer";
+import { ImgAC,moduleAC,stateAC } from "../../../redux/product-reducer";
 
 
 
 class MusicContainer extends React.Component{
   componentDidUpdate(prevProps,prevState){
-    debugger;
     if (this.props.production!== prevProps.production) {
       this.setState(this.props.production);
     }
@@ -15,7 +14,6 @@ class MusicContainer extends React.Component{
   
   }
   render() {
-    debugger;
     return (
       <>
         <Music  prod={this.props}/>
@@ -31,4 +29,4 @@ const mapStateToProps=(state)=>{
     production:state.production,
   }
 }
-export default connect(mapStateToProps,{ImgAC,moduleAC})(MusicContainer);
+export default connect(mapStateToProps,{ImgAC,moduleAC,stateAC})(MusicContainer);
