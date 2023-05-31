@@ -1,5 +1,13 @@
 @import '../../../Common/style/style.scss';
 
+@font-face {
+  font-family: "Rurik (viking)";
+  src: url("Rurikviking-Regular.eot");
+  src: url("Rurikviking-Regular.eot?#iefix") format("embedded-opentype"), url("Rurikviking-Regular.woff2") format("woff2"), url("Rurikviking-Regular.woff") format("woff"), url("Rurikviking-Regular.ttf") format("truetype"), url("Rurikviking-Regular.svg#Rurikviking-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 // color
 $border:black;
 $buttonBG:rgb(86, 85, 85);
@@ -29,7 +37,9 @@ $fc:rgb(255, 255, 255);
   display: grid;
   height: $BodyH;
   width: 100%;
-
+  -webkit-transition: 500ms ease-in; /* Safari and Chrome */
+  -moz-transition: 500ms ease-in; /* Firefox 4 */
+  -o-transition: 500ms ease-in;
   top: $HeaderH;
 
 .Music{
@@ -45,6 +55,14 @@ $fc:rgb(255, 255, 255);
   width: 90%;
   height: 90%; 
   font-family:$ff;
+  .end{
+    position: absolute;
+    top: 5px;
+    margin-left: 1%;
+    display: grid;
+    img {cursor: pointer;width: 15px;height: 15px;}
+    &:hover{filter: drop-shadow(0 0 1px white); @extend %transition}
+  }
     .img{
       position: relative;
       display: grid;
@@ -135,11 +153,12 @@ $fc:rgb(255, 255, 255);
       .item{
         font-size:$h1_fz;
         font-weight: bold;
+        font-family:'Courier New', Courier, monospace;
         display: flex;
         justify-content: center;
         align-items: center;
-        .sub_button button {font-weight: lighter; color: rgba(255, 255, 255, 0.685)}
-        .btn h2{color:$fc;}
+        .sub_button button {font-weight: lighter; color: rgba(255, 255, 255, 0.685);font-family:'Courier New', Courier, monospace;}
+        .btn h2{color:$fc;font-family: 'Courier New', Courier, monospace;}
         button{
           background-color: rgba(240, 248, 255, 0);
           border: none;
@@ -147,6 +166,7 @@ $fc:rgb(255, 255, 255);
           transition: 500ms;
           font-weight: bold;
           color:$fc ;
+          font-family: Georgia, 'Times New Roman', Times, serif;
         }
       
       }

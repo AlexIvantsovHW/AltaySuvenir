@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Rurik (viking)";
+  src: url("Rurikviking-Regular.eot");
+  src: url("Rurikviking-Regular.eot?#iefix") format("embedded-opentype"), url("Rurikviking-Regular.woff2") format("woff2"), url("Rurikviking-Regular.woff") format("woff"), url("Rurikviking-Regular.ttf") format("truetype"), url("Rurikviking-Regular.svg#Rurikviking-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 .Footer .footer_menu img, .header .logo .logoImg img:hover {
   -webkit-transition: 500ms ease-in; /* Safari and Chrome */
   -moz-transition: 500ms ease-in; /* Firefox 4 */
@@ -21,10 +29,8 @@
   padding: auto;
   font-size: 20px;
   position: relative;
-  box-sizing: border-box;
   transition: all 250ms ease;
-  -webkit-text-stroke: 0.2px black;
-  font-weight: bold;
+  font-family: "Rurik (viking)";
 }
 .head_menu .menu_container .btn button:before {
   content: "";
@@ -45,6 +51,7 @@
   height: 42px;
   background: rgba(255, 255, 255, 0.407);
   transition: all 1000ms ease;
+  font-family: ff_head;
 }
 .head_menu .menu_container .btn button:hover:before, .head_menu .menu_container .btn button:hover::after {
   width: 50%;
@@ -63,6 +70,16 @@
   --f-color:white;
 }
 
+body {
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  place-content: center;
+  background-color: black;
+}
+
 .container {
   background-size: cover;
   background-repeat: no-repeat;
@@ -70,6 +87,7 @@
   width: 100vw;
   height: 100vh;
   place-content: center;
+  background-image: url("https://kartinkin.net/uploads/posts/2022-03/1646467657_5-kartinkin-net-p-kartinki-shaman-5.jpg");
 }
 
 .header {
@@ -84,6 +102,7 @@
   font-size: 10px;
   color: black;
   background-color: rgba(91, 91, 91, 0.422);
+  font-family: ff_head;
 }
 .header .logo {
   display: flex;
@@ -114,6 +133,7 @@
 }
 
 .head_menu {
+  font-family: ff_head;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -132,22 +152,23 @@
   display: grid;
   width: 100vw;
   min-height: calc(100vh - 100px - 50px);
+  font-family: "Rurik (viking)";
 }
 .Body .BodyContainer {
   position: fixed;
   display: grid;
   width: 100vw;
   min-height: calc(100vh - 100px - 50px);
+  font-family: "Rurik (viking)";
 }
 .Body .BodyContainer .containerText {
-  margin-top: 0%;
   text-align: center;
   text-shadow: 1px 1px 1px #000;
 }
 .Body .BodyContainer .containerText h1 {
   font-size: 70px;
   color: white;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-family: "Rurik (viking)";
 }
 
 .Footer {

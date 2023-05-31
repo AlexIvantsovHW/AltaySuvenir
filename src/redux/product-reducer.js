@@ -2,6 +2,7 @@
 const SET_IMG='SET_IMG'
 const SET_MODULE='SET_MODULE'
 const SET_STATE='SET_STATE'
+const SET_CLEAR='SET_CLEAR'
 
 
 let initialState = {
@@ -38,7 +39,6 @@ let initialState = {
             price:['2 500','4 600','6 200','12 000','16 500','21 500','50 000','60 000'],
             d:[14,18,23,30,35,40,60,65],
         },},
-
     }}
 
 
@@ -47,6 +47,7 @@ const ProductReducer = (state = initialState, action) => {
     case SET_IMG: return { ...state,  current_img:action.Img}; 
     case SET_MODULE:debugger;return { ...state,State:action.state, current_module:action.module,current_img:0}; 
     case SET_STATE:debugger;return { ...state,state:action.state};
+    case SET_CLEAR:debugger;return {...state=initialState,current_img:action.clear}
     default:return { ...state };
   }
 };
@@ -54,4 +55,5 @@ const ProductReducer = (state = initialState, action) => {
 export const ImgAC=(Img)=>{return{type: SET_IMG,Img }};
 export const moduleAC=(module,state)=>{debugger;return{type:SET_MODULE,module,state}}
 export const stateAC=(state)=>{{debugger;return{type:SET_STATE,state}}}
+export const clearAC=(clear)=>{{debugger;return{type:SET_CLEAR,clear}}}
 export default ProductReducer;

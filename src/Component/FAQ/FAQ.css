@@ -1,17 +1,22 @@
-.header .logo .logoImg img:hover {
+@font-face {
+  font-family: "Rurik (viking)";
+  src: url("Rurikviking-Regular.eot");
+  src: url("Rurikviking-Regular.eot?#iefix") format("embedded-opentype"), url("Rurikviking-Regular.woff2") format("woff2"), url("Rurikviking-Regular.woff") format("woff"), url("Rurikviking-Regular.ttf") format("truetype"), url("Rurikviking-Regular.svg#Rurikviking-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+.Footer .footer_menu img, .header .logo .logoImg img:hover {
   -webkit-transition: 500ms ease-in; /* Safari and Chrome */
   -moz-transition: 500ms ease-in; /* Firefox 4 */
   -o-transition: 500ms ease-in;
 }
 
 .faqContainer .faqImg img, .header .logo .logoImg img, .header .logo img {
+  z-index: 100;
   opacity: 100%;
-  z-index: 100;
 }
-img{
-  opacity: 1;
-  z-index: 100;
-}
+
 .head_menu .menu_container .btn button {
   width: 150px;
   height: 42px;
@@ -24,10 +29,8 @@ img{
   padding: auto;
   font-size: 20px;
   position: relative;
-  box-sizing: border-box;
   transition: all 250ms ease;
-  -webkit-text-stroke: 0.2px black;
-  font-weight: bold;
+  font-family: "Rurik (viking)";
 }
 .head_menu .menu_container .btn button:before {
   content: "";
@@ -48,6 +51,7 @@ img{
   height: 42px;
   background: rgba(255, 255, 255, 0.407);
   transition: all 1000ms ease;
+  font-family: ff_head;
 }
 .head_menu .menu_container .btn button:hover:before, .head_menu .menu_container .btn button:hover::after {
   width: 50%;
@@ -76,57 +80,24 @@ img{
   --f-color:white;
 }
 
-.MainContainer {
-  background-image: url("https://img5.goodfon.ru/original/1600x900/d/ba/gory-pole-kon-loshad-muzhchina-aziat-ptitsa-kamni-altai.jpg");
+body {
   background-size: cover;
   background-repeat: no-repeat;
   display: grid;
-  position: relative;
   width: 100vw;
   height: 100vh;
   place-content: center;
+  background-color: black;
 }
 
-@keyframes fade {
-  0% {
-    opacity: 1;
-  }
-  33% {
-    opacity: 0;
-  }
-  67% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-.MainContainer img {
-  z-index: 0;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  -o-object-fit: cover;
-     object-fit: cover;
-  left: 0;
-  animation: fade 15s ease-in-out infinite alternate;
-}
-
-img:nth-last-of-type(1) {
-  animation-delay: 0s;
-}
-
-img:nth-last-of-type(2) {
-  animation-delay: 3s;
-}
-
-img:nth-last-of-type(3) {
-  animation-delay: 6s;
-}
-
-img:nth-last-of-type(4) {
-  animation-delay: 9s;
+.container {
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  place-content: center;
+  background-image: url("https://kartinkin.net/uploads/posts/2022-03/1646467657_5-kartinkin-net-p-kartinki-shaman-5.jpg");
 }
 
 .header {
@@ -141,6 +112,7 @@ img:nth-last-of-type(4) {
   font-size: 10px;
   color: black;
   background-color: rgba(91, 91, 91, 0.422);
+  font-family: ff_head;
 }
 .header .logo {
   display: flex;
@@ -171,6 +143,7 @@ img:nth-last-of-type(4) {
 }
 
 .head_menu {
+  font-family: ff_head;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -189,6 +162,23 @@ img:nth-last-of-type(4) {
   display: grid;
   width: 100vw;
   min-height: calc(100vh - 100px - 50px);
+  font-family: "Rurik (viking)";
+}
+.Body .BodyContainer {
+  position: fixed;
+  display: grid;
+  width: 100vw;
+  min-height: calc(100vh - 100px - 50px);
+  font-family: "Rurik (viking)";
+}
+.Body .BodyContainer .containerText {
+  text-align: center;
+  text-shadow: 1px 1px 1px #000;
+}
+.Body .BodyContainer .containerText h1 {
+  font-size: 70px;
+  color: white;
+  font-family: "Rurik (viking)";
 }
 
 .Footer {
@@ -227,8 +217,22 @@ img:nth-last-of-type(4) {
   margin: auto;
   width: 40px;
   height: 40px;
+  filter: brightness(80%);
+}
+.Footer .footer_menu img:hover {
+  width: 45px;
+  height: 45px;
+  filter: brightness(120%);
 }
 
+@font-face {
+  font-family: "Rurik (viking)";
+  src: url("Rurikviking-Regular.eot");
+  src: url("Rurikviking-Regular.eot?#iefix") format("embedded-opentype"), url("Rurikviking-Regular.woff2") format("woff2"), url("Rurikviking-Regular.woff") format("woff"), url("Rurikviking-Regular.ttf") format("truetype"), url("Rurikviking-Regular.svg#Rurikviking-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 .faqContainer {
   background-color: rgba(5, 5, 5, 0.77);
   box-shadow: 1px 1px 4px rgba(128, 128, 128, 0.277);

@@ -2,96 +2,75 @@ import React, { useState } from "react";
 import "./Music.css";
 import { Buben, Data, Music_Items,Comus,Shum,ShumDict, commonImg} from "../../../Common/Data";
 import { bubenDict,ComusDict } from "../../../Common/Data";
-
-
-
-
-
-
+import { NavLink } from "react-router-dom";
 
 
 const Music = (props) => {
-debugger;
+  debugger;
+
+let page_Items=Music_Items // Менять
+let [item_1,dict_1,item_2,dict_2,item_3,dict_3]=[Buben[0],bubenDict,Comus[0],ComusDict,Shum[0],ShumDict] // Менять
+let pWay=props.production// менять
+  
 //____________________ЛОГИКА____________________________
   // Проверка текущего модуля и экземпляра
-  let Module_current=props.prod.production.current_module;
-  switch (Module_current){
-    case 'Бубны':
-      item=Buben[0];
-      dict=bubenDict;
-      break;
-    case 'Комусы':
-      item=Comus[0];
-      dict=ComusDict;
-      break;
-    default:
-      item=Shum[0];
-      dict=ShumDict;
-  }
-  
+  let Module_current=pWay.current_module;
 
+  let  SwtichModule=(Module)=>{
+    switch (Module){
+      case page_Items[0]:
+        item=item_1;
+        dict=dict_1;
+        break;
+      case page_Items[1]:
+        item=item_2;
+        dict=dict_2;
+        break;
+      default:
+        item=item_3;
+        dict=dict_3;
+    }   
+};
+  SwtichModule(Module_current);
   var item;
   var dict;
   var objLength=(Object.keys(item).length)
   
 
-
+  let toExit=()=>{
+   return (props.clearAC(0))
+  }
   // Смена модуля
   let curr_page=0;
+
   let prevModule=()=>{
-    switch (Music_Items[left_module]){
-      case 'Бубны':
-        item=Buben[0];
-        dict=bubenDict;
-        break;
-      case 'Комусы':
-        item=Comus[0];
-        dict=ComusDict;
-        break;
-      default:
-        item=Shum[0];
-        dict=ShumDict;
-    }
-    return (props.prod.moduleAC(Music_Items[left_module],item,curr_page))}
+    SwtichModule(page_Items[left_module]);
+    return (props.moduleAC(page_Items[left_module],item,curr_page))}
   let nextModule=()=>{
-    
-    switch (Music_Items[right_module]){
-      case 'Бубны':
-        item=Buben[0];
-        dict=bubenDict;
-        break;
-      case 'Комусы':
-        item=Comus[0];
-        dict=ComusDict;
-        break;
-      default:
-        item=Shum[0];
-        dict=ShumDict;
-    }
-    debugger;
-    return (
+    SwtichModule(page_Items[right_module]);
+    return (props.moduleAC(page_Items[right_module],item,curr_page))}
 
-    props.prod.moduleAC(Music_Items[right_module],item,curr_page)
-    )}
-
-  let ICM=Music_Items.indexOf(Module_current) // index of current module
+  let ICM=page_Items.indexOf(Module_current) // index of current module
   let left_module=((ICM-1)<0?ICM:(ICM-1));
-  let right_module=((ICM+1)===Music_Items.length?ICM:(ICM+1));
+  let right_module=((ICM+1)===page_Items.length?ICM:(ICM+1));
 
 // Ссылки на конкретные товары
 
-  let Img_current=props.prod.production.current_img;
+  var Img_current=(pWay.current_img>objLength?0:pWay.current_img);
+
+  let Curr_State=pWay.State[dict[Img_current]];// current state
   let name=(Object.keys(item).length>1?(item[dict[Img_current]].name):(item[dict[0]].name))
-  let articul=props.prod.production.State[dict[Img_current]].articul;
-  let size= (props.prod.production.State[dict[Img_current]].size?props.prod.production.State[dict[Img_current]].size:null)/* ((item[dict[Img_current]].size===undefined)?null:item[dict[Img_current]].size) */
-  let price=(props.prod.production.State[dict[Img_current]].price?props.prod.production.State[dict[Img_current]].price:null)/* item[dict[Img_current]].price */
-  let Desc=(props.prod.production.State[dict[Img_current]].Desc?props.prod.production.State[dict[Img_current]].Desc:null)/* item[dict[Img_current]].Desc */
+  let articul=Curr_State.articul;
+  let size= (Curr_State.size?Curr_State.size:null)
+  let price=(Curr_State.price?Curr_State.price:null)
+  let Desc=(Curr_State.Desc?Curr_State.Desc:null)
+
 // Проверка длины диапозона
   let Left_check=((Img_current-1)<0?Img_current:(Img_current-1))
   let Right_check=((Img_current+1)===objLength?Img_current:(Img_current+1))
 
-  let PREV=()=>{return(props.prod.ImgAC(Left_check))}
-  let NEXT=()=>{return(props.prod.ImgAC(Right_check))}
+  let PREV=()=>{return(props.ImgAC(Left_check))}
+  let NEXT=()=>{return(props.ImgAC(Right_check))}
 
   // Загрузка таблицы
 
@@ -102,11 +81,10 @@ debugger;
       (size.d.map(item=><td>{item}</td>)):null
       )
 
+      // Таблицы с ценами
   let Table=(size?(    
-  
   <table frame="hsides" rules="rows" rules="cols">
- <caption>Таблица размеров</caption>
-   
+    <caption>Таблица размеров</caption>
     <tr>
     <th>Размер,см</th>
       {itemTableD}
@@ -116,18 +94,23 @@ debugger;
       {itemTablePrice}
     </tr>
     </table>):null) 
+
+
 //____________________ТЕЛО КОМПОНЕНТЫ____________________________
 return (
   <div className="music_container">
+     
 <div className="Music">
+
       <div className="img">
-        <div className='img_container'><img src={props.prod.production.State[dict[Img_current]].img} /></div>        
+        <div className='img_container'><img src={Curr_State.img} /></div>        
         <div className={'img_button'} >
           <div ><img src={commonImg.leftArrow} onClick={PREV}/></div>
           <div ><img src={commonImg.rightArrow} onClick={NEXT}/></div>
         </div>
       </div>
       <div className="text">
+     
       <div className="item">
   <div className="sub_button"><button onClick={prevModule}><h3>{Music_Items[ICM-1]}</h3></button> </div>
   <div className="button"><button><h2>{Module_current}</h2></button></div>
@@ -150,6 +133,7 @@ return (
           </div>
         </div>
       </div>
+      
     </div>
 
 

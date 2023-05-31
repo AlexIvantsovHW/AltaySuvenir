@@ -1,4 +1,12 @@
 @import '../../Common/style/style.scss';
+@font-face {
+  font-family: "Rurik (viking)";
+  src: url("Rurikviking-Regular.eot");
+  src: url("Rurikviking-Regular.eot?#iefix") format("embedded-opentype"), url("Rurikviking-Regular.woff2") format("woff2"), url("Rurikviking-Regular.woff") format("woff"), url("Rurikviking-Regular.ttf") format("truetype"), url("Rurikviking-Regular.svg#Rurikviking-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 // top margin for header
 $tmrgn:150px;

@@ -67,6 +67,7 @@ class Product extends React.Component{
       <div className="front"><img src={commonImg.mask}/></div>
       <div className="back">Маски</div>
     </NavLink> 
+    
   </div>
   </div>
 

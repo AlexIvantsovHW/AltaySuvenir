@@ -5,10 +5,10 @@ import { commonImg } from "../../Common/Data";
 
 const Header=()=>{
     return(
+      
         <div className="header">
         <div className="logo">
-        <NavLink to={`/mainPage`}><div className="logoImg"><img src={commonImg.logo}/></div></NavLink>
-          
+        <NavLink to={`/mainPage`}><div className="logoImg"><img src={commonImg.logo}/></div></NavLink>    
         </div>
         <div className="head_menu">
         

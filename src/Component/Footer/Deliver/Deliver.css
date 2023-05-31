@@ -1,7 +1,20 @@
-.header .logo .logoImg img:hover {
+@font-face {
+  font-family: "Rurik (viking)";
+  src: url("Rurikviking-Regular.eot");
+  src: url("Rurikviking-Regular.eot?#iefix") format("embedded-opentype"), url("Rurikviking-Regular.woff2") format("woff2"), url("Rurikviking-Regular.woff") format("woff"), url("Rurikviking-Regular.ttf") format("truetype"), url("Rurikviking-Regular.svg#Rurikviking-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+.Footer .footer_menu img, .header .logo .logoImg img:hover {
   -webkit-transition: 500ms ease-in; /* Safari and Chrome */
   -moz-transition: 500ms ease-in; /* Firefox 4 */
   -o-transition: 500ms ease-in;
+}
+
+.header .logo .logoImg img, .header .logo img {
+  z-index: 100;
+  opacity: 100%;
 }
 
 .head_menu .menu_container .btn button {
@@ -16,10 +29,8 @@
   padding: auto;
   font-size: 20px;
   position: relative;
-  box-sizing: border-box;
   transition: all 250ms ease;
-  -webkit-text-stroke: 0.2px black;
-  font-weight: bold;
+  font-family: "Rurik (viking)";
 }
 .head_menu .menu_container .btn button:before {
   content: "";
@@ -40,6 +51,7 @@
   height: 42px;
   background: rgba(255, 255, 255, 0.407);
   transition: all 1000ms ease;
+  font-family: ff_head;
 }
 .head_menu .menu_container .btn button:hover:before, .head_menu .menu_container .btn button:hover::after {
   width: 50%;
@@ -68,14 +80,24 @@
   --f-color:white;
 }
 
-.container {
-  background-image: url("https://img5.goodfon.ru/original/1600x900/d/ba/gory-pole-kon-loshad-muzhchina-aziat-ptitsa-kamni-altai.jpg");
+body {
   background-size: cover;
   background-repeat: no-repeat;
   display: grid;
   width: 100vw;
   height: 100vh;
   place-content: center;
+  background-color: black;
+}
+
+.container {
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  place-content: center;
+  background-image: url("https://kartinkin.net/uploads/posts/2022-03/1646467657_5-kartinkin-net-p-kartinki-shaman-5.jpg");
 }
 
 .header {
@@ -90,6 +112,7 @@
   font-size: 10px;
   color: black;
   background-color: rgba(91, 91, 91, 0.422);
+  font-family: ff_head;
 }
 .header .logo {
   display: flex;
@@ -120,6 +143,7 @@
 }
 
 .head_menu {
+  font-family: ff_head;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -138,6 +162,23 @@
   display: grid;
   width: 100vw;
   min-height: calc(100vh - 100px - 50px);
+  font-family: "Rurik (viking)";
+}
+.Body .BodyContainer {
+  position: fixed;
+  display: grid;
+  width: 100vw;
+  min-height: calc(100vh - 100px - 50px);
+  font-family: "Rurik (viking)";
+}
+.Body .BodyContainer .containerText {
+  text-align: center;
+  text-shadow: 1px 1px 1px #000;
+}
+.Body .BodyContainer .containerText h1 {
+  font-size: 70px;
+  color: white;
+  font-family: "Rurik (viking)";
 }
 
 .Footer {
@@ -149,12 +190,13 @@
   height: 50px;
   bottom: 0;
   left: 0;
-  background-color: rgba(91, 91, 91, 0.432);
+  background-color: rgba(255, 255, 255, 0);
 }
 .Footer .footer_menu {
+  border: none;
   display: grid;
+  grid-template-columns: 1fr 1fr;
   margin: auto;
-  border: solid;
   width: 100px;
   height: 100%;
 }
@@ -175,8 +217,22 @@
   margin: auto;
   width: 40px;
   height: 40px;
+  filter: brightness(80%);
+}
+.Footer .footer_menu img:hover {
+  width: 45px;
+  height: 45px;
+  filter: brightness(120%);
 }
 
+@font-face {
+  font-family: "Rurik (viking)";
+  src: url("Rurikviking-Regular.eot");
+  src: url("Rurikviking-Regular.eot?#iefix") format("embedded-opentype"), url("Rurikviking-Regular.woff2") format("woff2"), url("Rurikviking-Regular.woff") format("woff"), url("Rurikviking-Regular.ttf") format("truetype"), url("Rurikviking-Regular.svg#Rurikviking-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 .deliverContainer {
   background-color: rgba(5, 5, 5, 0.77);
   box-shadow: 1px 1px 4px rgba(128, 128, 128, 0.277);

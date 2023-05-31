@@ -1,9 +1,20 @@
+
+
+@font-face {
+  font-family: "Rurik (viking)";
+  src: url("Rurikviking-Regular.eot");
+  src: url("Rurikviking-Regular.eot?#iefix") format("embedded-opentype"), url("Rurikviking-Regular.woff2") format("woff2"), url("Rurikviking-Regular.woff") format("woff"), url("Rurikviking-Regular.ttf") format("truetype"), url("Rurikviking-Regular.svg#Rurikviking-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 //
 $HeaderH:100px;
 $FooterH:50px;
 $BodyH:calc(100vh - $HeaderH - $FooterH);
 
-
+$ff_head:'Rurik (viking)';
 
 // PageWidth
 $PgWh:70%;
@@ -61,10 +72,8 @@ $duration:500ms;
 	padding: auto;
 	font-size: $h1_fz;
 	position: relative;
-	box-sizing: border-box;
 	transition: all calc($duration/2) ease; 
-  -webkit-text-stroke: 0.2px black;
-  font-weight: bold;
+  font-family:$ff_head;
   }
   .btn  button:before {
     content:'';
@@ -85,6 +94,7 @@ $duration:500ms;
     height: 42px;
     background:$buttonBGHover;
     transition: all $duration*2 ease;
+    font-family: ff_head;
   }
 
   .btn button:hover:before,.btn button:hover::after {width: 50%;}
@@ -112,6 +122,15 @@ $duration:500ms;
 }
 
 $logoFS:70px;
+body{
+  background-size: cover;
+  background-repeat: no-repeat;
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    place-content: center;
+   background-color: black;
+}
 
 .container {
   background-size: cover;
@@ -120,6 +139,8 @@ $logoFS:70px;
     width: 100vw;
     height: 100vh;
     place-content: center;
+    background-image: url('https://kartinkin.net/uploads/posts/2022-03/1646467657_5-kartinkin-net-p-kartinki-shaman-5.jpg');
+  
 }
     // _______________Header_________________
 
@@ -135,7 +156,7 @@ $logoFS:70px;
   font-size: $pfz;
   color: black;
   background-color: $BG_H;
-
+  font-family: ff_head;
   .logo{
     display: flex;
     justify-content: center;
@@ -169,6 +190,7 @@ $logoFS:70px;
 }
 
 .head_menu{
+font-family: ff_head;
 display: flex;
 justify-content: space-around;
 align-items: center;
@@ -190,15 +212,15 @@ height: 100%;
     display: grid;
     width: 100vw;
     min-height:$BodyH;
-
+    font-family: 'Rurik (viking)';
     .BodyContainer{
       position: fixed;
       display: grid;
       width: 100vw;
-      
       min-height:$BodyH;
-      .containerText{margin-top:0%; text-align: center;text-shadow: 1px 1px 1px #000;}
-      .containerText h1{font-size:$logoFS; color: white; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-family: 'Rurik (viking)';
+      .containerText{text-align: center;text-shadow: 1px 1px 1px #000;}
+      .containerText h1{font-size:$logoFS; color: white; font-family:'Rurik (viking)';
  }
   
     }
