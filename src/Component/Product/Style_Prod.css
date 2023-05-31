@@ -1,0 +1,466 @@
+@font-face {
+  font-family: "Rurik (viking)";
+  src: url("Rurikviking-Regular.eot");
+  src: url("Rurikviking-Regular.eot?#iefix") format("embedded-opentype"), url("Rurikviking-Regular.woff2") format("woff2"), url("Rurikviking-Regular.woff") format("woff"), url("Rurikviking-Regular.ttf") format("truetype"), url("Rurikviking-Regular.svg#Rurikviking-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+.music_container .Music .end:hover, .Footer .footer_menu img, .header .logo .logoImg img:hover, .music_container .wallet img, .music_container .wallet button, .music_container .wallet {
+  -webkit-transition: 500ms ease-in; /* Safari and Chrome */
+  -moz-transition: 500ms ease-in; /* Firefox 4 */
+  -o-transition: 500ms ease-in;
+}
+
+.music_container .wallet:hover {
+  transition: 500ms ease-in;
+  filter: drop-shadow(0 0 2px rgba(0, 246, 0, 0.684));
+}
+
+.header .logo .logoImg img, .header .logo img {
+  z-index: 100;
+  opacity: 100%;
+}
+
+.head_menu .menu_container .btn button {
+  width: 150px;
+  height: 42px;
+  border-left: solid 2px rgba(255, 255, 255, 0.656);
+  border-right: solid 2px rgba(255, 255, 255, 0.656);
+  border-top: none;
+  border-bottom: none;
+  background: rgba(0, 12, 245, 0);
+  color: #ffffff;
+  padding: auto;
+  font-size: 20px;
+  position: relative;
+  transition: all 250ms ease;
+  font-family: "Rurik (viking)";
+}
+.head_menu .menu_container .btn button:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 42px;
+  background: rgba(255, 255, 255, 0.407);
+  transition: all 1000ms ease;
+}
+.head_menu .menu_container .btn button:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 42px;
+  background: rgba(255, 255, 255, 0.407);
+  transition: all 1000ms ease;
+  font-family: ff_head;
+}
+.head_menu .menu_container .btn button:hover:before, .head_menu .menu_container .btn button:hover::after {
+  width: 50%;
+}
+.head_menu .menu_container .btn button:hover {
+  border: none rgba(255, 0, 0, 0);
+  transition: all 250ms ease;
+}
+
+:root {
+  --h1-fsz:25px;
+  --h2-fsz:18px;
+  --h3-fsz:16px;
+  --p-fsz:14px;
+  --bh-color:rgba(149, 147, 147, 0.49);
+  --f-color:white;
+}
+
+body {
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  place-content: center;
+  background-color: black;
+}
+
+.container {
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  place-content: center;
+  background-image: url("https://kartinkin.net/uploads/posts/2022-03/1646467657_5-kartinkin-net-p-kartinki-shaman-5.jpg");
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 0.5fr 4fr;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100px;
+  z-index: 10;
+  font-size: 10px;
+  color: black;
+  background-color: rgba(91, 91, 91, 0.422);
+  font-family: ff_head;
+}
+.header .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+}
+.header .logo img {
+  width: 100px;
+  height: 100px;
+}
+.header .logo .logoImg img {
+  width: 100px;
+  height: 100px;
+}
+.header .logo .logoImg img:hover {
+  filter: drop-shadow(0 0 10px black);
+  transition: 500ms ease-in;
+}
+.header .logo .logoImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2.5%;
+  width: 250px;
+  height: 100px;
+}
+
+.head_menu {
+  font-family: ff_head;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.head_menu .menu_container {
+  margin: 0 10%;
+  width: 100px;
+  height: 50px;
+}
+
+.Body {
+  position: fixed;
+  top: 100px;
+  display: grid;
+  width: 100vw;
+  min-height: calc(100vh - 100px - 50px);
+  font-family: "Rurik (viking)";
+}
+.Body .BodyContainer {
+  position: fixed;
+  display: grid;
+  width: 100vw;
+  min-height: calc(100vh - 100px - 50px);
+  font-family: "Rurik (viking)";
+}
+.Body .BodyContainer .containerText {
+  text-align: center;
+  text-shadow: 1px 1px 1px #000;
+}
+.Body .BodyContainer .containerText h1 {
+  font-size: 70px;
+  color: white;
+  font-family: "Rurik (viking)";
+}
+
+.Footer {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  color: white;
+  width: 100vw;
+  height: 50px;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0);
+}
+.Footer .footer_menu {
+  border: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: auto;
+  width: 100px;
+  height: 100%;
+}
+.Footer .footer_menu h1 {
+  font-size: 15px;
+}
+.Footer .footer_menu a {
+  text-decoration: none;
+}
+.Footer .footer_menu span {
+  font-size: 10px;
+  font-style: italic;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
+.Footer .footer_menu img {
+  margin: auto;
+  width: 40px;
+  height: 40px;
+  filter: brightness(80%);
+}
+.Footer .footer_menu img:hover {
+  width: 45px;
+  height: 45px;
+  filter: brightness(120%);
+}
+
+@font-face {
+  font-family: "Rurik (viking)";
+  src: url("Rurikviking-Regular.eot");
+  src: url("Rurikviking-Regular.eot?#iefix") format("embedded-opentype"), url("Rurikviking-Regular.woff2") format("woff2"), url("Rurikviking-Regular.woff") format("woff"), url("Rurikviking-Regular.ttf") format("truetype"), url("Rurikviking-Regular.svg#Rurikviking-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+.head_menu .menu_container button {
+  background-color: rgb(86, 85, 85);
+  font-size: 20px;
+  width: 100px;
+  height: 50px;
+  border-bottom: solid 0.5px gray;
+  border-top: solid 0.5px gray;
+}
+.head_menu .menu_container button:hover {
+  background-color: red;
+}
+
+.music_container {
+  position: fixed;
+  display: grid;
+  height: calc(100vh - 100px - 50px);
+  width: 100%;
+  -webkit-transition: 500ms ease-in; /* Safari and Chrome */
+  -moz-transition: 500ms ease-in; /* Firefox 4 */
+  -o-transition: 500ms ease-in;
+  top: 100px;
+}
+.music_container .Music {
+  margin: auto;
+  background-color: rgba(5, 5, 5, 0.77);
+  box-shadow: 1px 1px 4px rgba(128, 128, 128, 0.277);
+  text-shadow: 0 1px 0 #333333;
+  border: solid rgba(128, 128, 128, 0);
+  border-radius: 50px;
+  position: relative;
+  display: grid;
+  grid-template-columns: 0.9fr 0.9fr 15px;
+  width: 90%;
+  height: 90%;
+}
+.music_container .Music .end {
+  position: absolute;
+  top: 5px;
+  margin-left: 95%;
+  display: grid;
+  cursor: pointer;
+}
+.music_container .Music .end img {
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+}
+.music_container .Music .end:hover {
+  filter: drop-shadow(0 0 1px white);
+}
+.music_container .Music .img {
+  position: relative;
+  display: grid;
+  grid-template-rows: 4fr 0.5fr;
+  width: 100%;
+  height: 100%;
+}
+.music_container .Music .img .img_button {
+  margin: auto;
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 5;
+}
+.music_container .Music .img .img_button img {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+.music_container .Music .img .img_button img:hover {
+  filter: drop-shadow(0 0 2px rgba(0, 246, 0, 0.684));
+}
+.music_container .Music .img .img_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.music_container .Music .img img {
+  height: 400px;
+  filter: drop-shadow(0 0 10px rgb(245, 245, 245));
+}
+.music_container .Music .img .curr_img_butt {
+  border: solid 3px rgb(97, 228, 4);
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  background-color: rgba(117, 253, 20, 0.549);
+  filter: drop-shadow(0 0 1px rgb(106, 255, 0));
+}
+.music_container .Music .img button {
+  margin-top: 25%;
+  background-color: rgba(128, 128, 128, 0.604);
+  border: solid 0.5px gray;
+  border-radius: 20px;
+  width: 20px;
+  height: 20px;
+  -webkit-transition: 500ms ease-in; /* Safari and Chrome */
+  -moz-transition: 500ms ease-in; /* Firefox 4 */
+  -o-transition: 500ms ease-in;
+}
+.music_container .Music .img button:hover {
+  filter: drop-shadow(0 0 2px gray);
+  background-color: rgba(117, 253, 20, 0.807);
+  transition: 400ms ease-in;
+}
+.music_container .Music .text {
+  margin: auto;
+  background-color: rgba(51, 51, 51, 0.5960784314);
+  color: rgb(255, 255, 255);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  height: 90%;
+  text-align: center;
+  display: grid;
+  grid-template-rows: 0.5fr 0.5fr 3fr 0.5fr;
+  width: 90%;
+  border-radius: 5%;
+}
+.music_container .Music .text .description {
+  text-indent: 25px;
+  padding: 0 10% 2% 10%;
+  height: 100%;
+  text-align: justify;
+}
+.music_container .Music .text .description h1 {
+  font-size: 20px;
+  text-align: center;
+}
+.music_container .Music .text .description h2 {
+  font-weight: lighter;
+  font-size: 15px;
+}
+.music_container .Music .text .description span {
+  font-weight: lighter;
+  font-size: 15px;
+}
+.music_container .Music .text .description table {
+  border-style: solid;
+  border-width: 0.2px;
+  width: 100%;
+  border-width: 1;
+}
+.music_container .Music .text .description table th {
+  border-style: solid;
+  border-width: 0.2px;
+}
+.music_container .Music .text .description table caption {
+  font-weight: bold;
+  font-style: italic;
+}
+.music_container .Music .text .description table tr {
+  border-style: solid;
+  border-width: 0.2px;
+  text-align: center;
+  frame: hsides;
+  rules: "rows";
+}
+.music_container .Music .text .description table td {
+  text-align: center;
+}
+.music_container .Music .text .item {
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.music_container .Music .text .item .sub_button button {
+  font-weight: lighter;
+  color: rgba(255, 255, 255, 0.685);
+}
+.music_container .Music .text .item .btn h2 {
+  color: rgb(255, 255, 255);
+}
+.music_container .Music .text .item button {
+  background-color: rgba(240, 248, 255, 0);
+  border: none;
+  cursor: pointer;
+  transition: 500ms;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+}
+.music_container .text::before {
+  filter: blur(5px);
+  background: inherit;
+}
+.music_container .price {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: left;
+  cursor: default;
+}
+.music_container .price .buy_cont {
+  font-size: 15px;
+}
+.music_container .price .buy {
+  font-style: italic;
+  font-weight: bold;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+}
+.music_container .price .buy .buy_cont {
+  margin-left: 35%;
+}
+.music_container .price .buy .buy_cont p {
+  font-weight: lighter;
+  font-style: normal;
+}
+.music_container .price .wallet-cont {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-self: start;
+  align-items: center;
+}
+.music_container .order {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.music_container .wallet {
+  cursor: pointer;
+  width: 40px;
+  height: 35px;
+}
+.music_container .wallet img {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}/*# sourceMappingURL=Style_Prod.css.map */

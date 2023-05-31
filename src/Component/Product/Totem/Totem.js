@@ -1,15 +1,10 @@
-import React, { useState } from "react";
-import "./Totem.css";
-import { Totem_Items,Totem, commonImg} from "../../../Common/Data";
-import { TotemDict } from "../../../Common/Data";
+import React from "react";
+import '../Style_Prod.css'
+import { Totem_Items,Totem,TotemDict, commonImg} from "../../../Common/Data";
 import { NavLink } from "react-router-dom";
 
 
 const Totems = (props) => {
-  debugger;
-
-  // clear AC
-/* props.clearAC(0); */
 
   let page_Items=Totem_Items // Менять
   let [item_1,dict_1]=[Totem[0],TotemDict] // Менять
@@ -24,14 +19,7 @@ const Totems = (props) => {
       case page_Items[0]:
         item=item_1;
         dict=dict_1;
-        break;/* 
-      case page_Items[1]:
-        item=item_2;
-        dict=dict_2;
         break;
-      default:
-        item=item_3;
-        dict=dict_3; */
     }   
 };
   SwtichModule(Module_current);
@@ -132,14 +120,11 @@ return (
           <div className="wallet-cont">
           <div className='wallet'> <a href='https://t.me/+0q63ZumKjDkxZDBi'> <img src={commonImg.wallet} /> </a> 
           </div>
-          
           </div>
         </div>
       </div>
-      <NavLink to='/product'><div className="end"><img src={commonImg.endPoint} onClick={toExit}/></div></NavLink>
+      <div className="end"><NavLink to='/product'><img src={commonImg.endPoint} onClick={toExit}/></NavLink></div>
     </div>
-
-
   </div>  
   );
 };

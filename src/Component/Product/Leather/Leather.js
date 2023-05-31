@@ -1,15 +1,12 @@
-import React, { useState } from "react";
-import "./Leather.css";
+import React from "react";
+import '../Style_Prod.css'
 import { Passport, Leather_Items,Braslet,Wallets, commonImg} from "../../../Common/Data";
 import { PassportDict,WalletDict,BrasletDict } from "../../../Common/Data";
 import { NavLink } from "react-router-dom";
 
 
 const Leather = (props) => {
-  debugger;
 
-  // clear AC
-/* props.clearAC(0); */
 
   let page_Items=Leather_Items // Менять
   let [item_1,dict_1,item_2,dict_2,item_3,dict_3]=[Wallets[0],WalletDict,Passport[0],PassportDict,Braslet[0],BrasletDict] // Менять
@@ -132,14 +129,11 @@ return (
           <div className="wallet-cont">
           <div className='wallet'> <a href='https://t.me/+0q63ZumKjDkxZDBi'> <img src={commonImg.wallet} /> </a> 
           </div>
-          
           </div>
         </div>
       </div>
-      <NavLink to='/product'><div className="end"><img src={commonImg.endPoint} onClick={toExit}/></div></NavLink>
+      <div className="end"><NavLink to='/product'><img src={commonImg.endPoint} onClick={toExit}/></NavLink></div>
     </div>
-
-
   </div>  
   );
 };

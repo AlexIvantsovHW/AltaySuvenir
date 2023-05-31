@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import "./Music.css";
-import { Buben, Data, Music_Items,Comus,Shum,ShumDict, commonImg} from "../../../Common/Data";
+import React from "react";
+import '../Style_Prod.css'
+import { Buben, Music_Items,Comus,Shum,ShumDict, commonImg} from "../../../Common/Data";
 import { bubenDict,ComusDict } from "../../../Common/Data";
 import { NavLink } from "react-router-dom";
 
 
 const Music = (props) => {
-  debugger;
+
 
 let page_Items=Music_Items // Менять
 let [item_1,dict_1,item_2,dict_2,item_3,dict_3]=[Buben[0],bubenDict,Comus[0],ComusDict,Shum[0],ShumDict] // Менять
@@ -129,14 +129,11 @@ return (
           <div className="wallet-cont">
           <div className='wallet'> <a href='https://t.me/+0q63ZumKjDkxZDBi'> <img src={commonImg.wallet} /> </a> 
           </div>
-          
           </div>
         </div>
       </div>
-      
+      <div className="end"><NavLink to='/product'><img src={commonImg.endPoint} onClick={toExit}/></NavLink></div>
     </div>
-
-
   </div>  
   );
 };

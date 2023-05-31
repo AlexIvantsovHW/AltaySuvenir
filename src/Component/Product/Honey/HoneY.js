@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import "./Honey.css";
+import React from "react";
+import '../Style_Prod.css'
 import { add_Items,Tea,TeaDict,Honey,HoneyDict,Oil,OilDict,Addings,AddDict,commonImg} from "../../../Common/Data";
 import { NavLink } from "react-router-dom";
 
@@ -138,10 +138,8 @@ return (
           </div>
         </div>
       </div>
-      <NavLink to='/product'><div className="end"><img src={commonImg.endPoint} onClick={toExit}/></div></NavLink>
+      <div className="end"><NavLink to='/product'><img src={commonImg.endPoint} onClick={toExit}/></NavLink></div>
     </div>
-
-
   </div>  
   );
 };

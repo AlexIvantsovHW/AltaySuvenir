@@ -17,6 +17,9 @@ import Header from './Component/Header/Header';
 import TotemContainer from "./Component/Product/Totem/TotemContainer";
 import OberegContainer from "./Component/Product/Obereg/OberegContainer";
 import HoneyContainer from "./Component/Product/Honey/HoneyContainer";
+import CamelContainer from "./Component/Product/Camel/CamelContainer";
+import MineralContainer from './Component/Product/Mineral/MineralContainer';
+import MaskContainer from './Component/Product/Mask/MineralContainer';
 
 
 
@@ -40,6 +43,9 @@ const App = () => {
             <Route path="/totem" element={<TotemContainer />} />
             <Route path="/obereg" element={<OberegContainer />} />
             <Route path="/tea" element={<HoneyContainer />} />
+            <Route path="/camel" element={<CamelContainer />} />
+            <Route path="/mineral" element={<MineralContainer />} />
+            <Route path="/mask" element={<MaskContainer />} />
           </Routes>
      <Footer/>
     </div>

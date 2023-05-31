@@ -1,18 +1,16 @@
 import React from "react";
 import '../Style_Prod.css'
-import { Obereg_Items,Obereg,OberegDict,Podveska,PodveskaDict,Kukla,KuklaDict,commonImg} from "../../../Common/Data";
+import { Mask_Items,Masks,MaskDict,commonImg} from "../../../Common/Data";
 import { NavLink } from "react-router-dom";
 
 
-const Oberegs = (props) => {
+const MasK = (props) => {
   debugger;
 
-  // clear AC
-/* props.clearAC(0); */
 
-  let page_Items=Obereg_Items // Менять
-  let [item_1,dict_1,item_2,dict_2,item_3,dict_3]=[Obereg[0],OberegDict,Podveska[0],PodveskaDict,Kukla[0],KuklaDict] // Менять
-  let pWay=props.obereg// менять
+  let page_Items=Mask_Items // Менять
+  let [item_1,dict_1]=[Masks[0],MaskDict] // Менять
+  let pWay=props.mask// менять
   
 //____________________ЛОГИКА____________________________
   // Проверка текущего модуля и экземпляра
@@ -24,15 +22,6 @@ const Oberegs = (props) => {
         item=item_1;
         dict=dict_1;
         break;
-      case page_Items[1]:
-        item=item_2;
-        dict=dict_2;
-        break;
-        case page_Items[2]:
-          item=item_3;
-          dict=dict_3;
-          break;
-
     }   
 };
   SwtichModule(Module_current);
@@ -139,9 +128,7 @@ return (
       </div>
       <div className="end"><NavLink to='/product'><img src={commonImg.endPoint} onClick={toExit}/></NavLink></div>
     </div>
-
-
   </div>  
   );
 };
-export default Oberegs;
+export default MasK;
