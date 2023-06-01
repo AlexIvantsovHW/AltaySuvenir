@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/AltaySuvenir/static/css/main.d293d126.css",
+    "main.js": "/AltaySuvenir/static/js/main.8028cbeb.js",
+    "static/media/Rurikviking-Regular.svg": "/AltaySuvenir/static/media/Rurikviking-Regular.22391169c9e37e7bc4cd.svg",
+    "static/media/Rurikviking-Regular.eot": "/AltaySuvenir/static/media/Rurikviking-Regular.535d0db0d6cf4a4c0296.eot",
+    "static/media/Rurikviking-Regular.ttf": "/AltaySuvenir/static/media/Rurikviking-Regular.f1bce476238b974549c2.ttf",
+    "static/media/Rurikviking-Regular.woff": "/AltaySuvenir/static/media/Rurikviking-Regular.eb9a90153223bd87d31f.woff",
+    "static/media/Rurikviking-Regular.woff2": "/AltaySuvenir/static/media/Rurikviking-Regular.ad55ec2a01733d958825.woff2",
+    "index.html": "/AltaySuvenir/index.html",
+    "main.d293d126.css.map": "/AltaySuvenir/static/css/main.d293d126.css.map",
+    "main.8028cbeb.js.map": "/AltaySuvenir/static/js/main.8028cbeb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d293d126.css",
+    "static/js/main.8028cbeb.js"
+  ]
+}
