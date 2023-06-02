@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/AltaySuvenir/static/css/main.b8f1cbcd.css",
+    "main.css": "/AltaySuvenir/static/css/main.d0a33c2b.css",
     "main.js": "/AltaySuvenir/static/js/main.4d6bbadc.js",
     "static/media/Rurikviking-Regular.svg": "/AltaySuvenir/static/media/Rurikviking-Regular.22391169c9e37e7bc4cd.svg",
     "static/media/Rurikviking-Regular.eot": "/AltaySuvenir/static/media/Rurikviking-Regular.535d0db0d6cf4a4c0296.eot",
@@ -8,11 +8,11 @@
     "static/media/Rurikviking-Regular.woff": "/AltaySuvenir/static/media/Rurikviking-Regular.eb9a90153223bd87d31f.woff",
     "static/media/Rurikviking-Regular.woff2": "/AltaySuvenir/static/media/Rurikviking-Regular.ad55ec2a01733d958825.woff2",
     "index.html": "/AltaySuvenir/index.html",
-    "main.b8f1cbcd.css.map": "/AltaySuvenir/static/css/main.b8f1cbcd.css.map",
+    "main.d0a33c2b.css.map": "/AltaySuvenir/static/css/main.d0a33c2b.css.map",
     "main.4d6bbadc.js.map": "/AltaySuvenir/static/js/main.4d6bbadc.js.map"
   },
   "entrypoints": [
-    "static/css/main.b8f1cbcd.css",
+    "static/css/main.d0a33c2b.css",
     "static/js/main.4d6bbadc.js"
   ]
 }
