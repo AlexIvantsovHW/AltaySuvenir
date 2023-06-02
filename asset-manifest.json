@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/AltaySuvenir/static/css/main.cdcd2afc.css",
-    "main.js": "/AltaySuvenir/static/js/main.0967783f.js",
+    "main.css": "/AltaySuvenir/static/css/main.b8f1cbcd.css",
+    "main.js": "/AltaySuvenir/static/js/main.4d6bbadc.js",
     "static/media/Rurikviking-Regular.svg": "/AltaySuvenir/static/media/Rurikviking-Regular.22391169c9e37e7bc4cd.svg",
     "static/media/Rurikviking-Regular.eot": "/AltaySuvenir/static/media/Rurikviking-Regular.535d0db0d6cf4a4c0296.eot",
     "static/media/Rurikviking-Regular.ttf": "/AltaySuvenir/static/media/Rurikviking-Regular.f1bce476238b974549c2.ttf",
     "static/media/Rurikviking-Regular.woff": "/AltaySuvenir/static/media/Rurikviking-Regular.eb9a90153223bd87d31f.woff",
     "static/media/Rurikviking-Regular.woff2": "/AltaySuvenir/static/media/Rurikviking-Regular.ad55ec2a01733d958825.woff2",
     "index.html": "/AltaySuvenir/index.html",
-    "main.cdcd2afc.css.map": "/AltaySuvenir/static/css/main.cdcd2afc.css.map",
-    "main.0967783f.js.map": "/AltaySuvenir/static/js/main.0967783f.js.map"
+    "main.b8f1cbcd.css.map": "/AltaySuvenir/static/css/main.b8f1cbcd.css.map",
+    "main.4d6bbadc.js.map": "/AltaySuvenir/static/js/main.4d6bbadc.js.map"
   },
   "entrypoints": [
-    "static/css/main.cdcd2afc.css",
-    "static/js/main.0967783f.js"
+    "static/css/main.b8f1cbcd.css",
+    "static/js/main.4d6bbadc.js"
   ]
 }
