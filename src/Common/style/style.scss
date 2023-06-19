@@ -21,12 +21,19 @@ $PgWh:70%;
 // top margin for header
 $tmrgn:100px;
 // Font size
+
+// __________________main
+$logoFS:70px;
 $pfz:10px;
-$head_fz:35px;
+$head_fz:33px;
 $h1_fz:20px;
 $h2_fz:15px;
 $h3_fz:10px;
 $h4_fz:8px;
+
+
+
+
 
 // Font family
 $ff:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -60,9 +67,9 @@ $duration:500ms;
 }
 // Button pattern
 %button{
-  .btn button{
-  width: 150px;
-  height: 42px;
+  button{
+  width: 120px;
+  height: fit-content;
   border-left: solid 2px $border;
 	border-right: solid 2px $border;
   border-top: none;
@@ -75,30 +82,30 @@ $duration:500ms;
 	transition: all calc($duration/2) ease; 
   font-family:$ff_head;
   }
-  .btn  button:before {
+  button:before {
     content:'';
     position: absolute;
     top: 0;
     left: 0;
     width: 0;
-    height: 42px;
+    height:fit-content;
     background: $buttonBGHover;
     transition: all $duration*2 ease;
   }
-  .btn  button:after {
+  button:after {
     content:'';
     position: absolute;
     top: 0;
     right: 0;
     width: 0;
-    height: 42px;
+    height: fit-content;
     background:$buttonBGHover;
     transition: all $duration*2 ease;
     font-family: ff_head;
   }
 
-  .btn button:hover:before,.btn button:hover::after {width: 50%;}
-  .btn button:hover{border: none rgba(255, 0, 0, 0);transition: all calc($duration/2) ease;}
+  button:hover:before,.btn button:hover::after {width: 50%;}
+  button:hover{border: none rgba(255, 0, 0, 0);transition: all calc($duration/2) ease;}
   }
 
 // Page pattern
@@ -129,18 +136,19 @@ body{
     width: 100vw;
     height: 100vh;
     place-content: center;
-   background-color: black;
+
 }
 
 .container {
+  background-image: url('https://kartinkin.net/uploads/posts/2022-03/1646467657_5-kartinkin-net-p-kartinki-shaman-5.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center center;
     display: grid;
     width: 100vw;
     height: 100vh;
     place-content: center;
-    background-image: url('https://kartinkin.net/uploads/posts/2022-03/1646467657_5-kartinkin-net-p-kartinki-shaman-5.jpg');
-  
+ 
 }
     // _______________Header_________________
 
@@ -164,46 +172,20 @@ body{
     width: 100%;
     height: $HeaderH;
     img{
-      @extend %imgSetting;
       width: 100px;
       height: 100px;
     }
-    .logoImg  img{
-      @extend %imgSetting;
-      width: 100px;
-      height: 100px;
-    }
-    .logoImg  img:hover{
-      @extend %transition;
-     filter: drop-shadow(0 0 10px black);
-     transition: $duration ease-in;
-    }
-    .logoImg{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 2.5%;
-      width: 250px;
-      height: $HeaderH;
-  }
 }
-}
-
 .head_menu{
 font-family: ff_head;
-display: flex;
-justify-content: space-around;
-align-items: center;
 width: 100%;
-height: 100%;
-.menu_container{
-  @extend %button;
-  margin:0 10%;
-  width: 100px;
-  height: 50px;
-}
-
-}
+height: 100px;
+display: flex;
+    justify-content: space-around;
+    align-items: center;
+    @extend %button;
+  }
+  }
 
   // _______________Body_________________
   .Body{
@@ -230,9 +212,9 @@ height: 100%;
     // _______________Footer_________________
 
     .Footer{
+      position: fixed;
       display: flex;
       justify-content: space-between;
-      position: fixed;
       color: $fc;
       width: 100vw;
       height: $FooterH;
@@ -253,8 +235,7 @@ height: 100%;
             font-style: italic;
             cursor: pointer;
             text-decoration: none;
-            color:$fc;
-          
+            color:$fc;       
           }
 
             img {margin: auto; width:40px;height: 40px;@extend %transition;filter: brightness(80%);}
@@ -262,3 +243,108 @@ height: 100%;
         }
       }
     
+
+      // __________________1024
+$logoFS_1024:60px;
+$pfz_1024:8px;
+$head_fz_1024:28px;
+$h1_fz_1024:15px;
+$h2_fz_1024:14px;
+$h3_fz_1024:12px;
+$h4_fz_1024:12px;
+
+// __________________768
+$logoFS_768:55px;
+$pfz_768:8px;
+$head_fz_768:25px;
+$h1_fz_768:14px;
+$h2_fz_768:13px;
+$h3_fz_768:10px;
+$h4_fz_768:10px;
+
+
+// __________________690
+$logoFS_690:50px;
+$pfz_690:8px;
+$head_fz_690:25px;
+$h1_fz_690:13px;
+$h2_fz_690:12px;
+$h3_fz_690:11px;
+$h4_fz_690:10px;
+// __________________500
+$logoFS_500:45px;
+$pfz_500:8px;
+$head_fz_500:20px;
+$h1_fz_500:13px;
+$h2_fz_500:12px;
+$h3_fz_500:11px;
+$h4_fz_500:10px;
+
+// __________________400
+$logoFS_400:40px;
+$pfz_400:8px;
+$head_fz_400:15px;
+$h1_fz_400:11px;
+$h2_fz_400:11px;
+$h3_fz_400:10px;
+$h4_fz_400:9px;
+
+
+
+@media (min-width:1024px) {#container{background-size: 100% auto;background-color: gray;}}
+    @media (max-width:1024px) {
+      .container {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+      }
+      #mainText{font-size:$logoFS_1024;}
+      #container{background-size: 100% 100%;background-color: gray;top: $tmrgn;}
+      }
+
+
+
+    @media (max-width:768px) {
+      #mainText{font-size:$logoFS_768;}
+      #container{background-size: auto 100%;background-color: gray;top: $tmrgn;}
+    }
+    
+    @media (max-width:690px) {
+      #mainText{font-size:$logoFS_690;}
+      #container{background-size: auto 100%;background-color: gray;top: $tmrgn;}
+
+    }
+    @media (max-width:590px) {
+      #mainText{font-size:$logoFS_690;}
+      #container{background-size: auto 100%;background-color: gray;top: $tmrgn;}
+
+    }
+    
+    @media (max-width:500px) {
+      #container{background-size: auto 100%;background-color: gray;top: $tmrgn;}
+      #mainText{font-size:$logoFS_500;}
+      .header .logo .logoImg{
+        display:flex; 
+        justify-content: flex-start;
+         width: 50px;}
+         .header .head_menu{margin:auto; display: flex;flex-wrap: wrap; height: fit-content;}
+         .header .head_menu button{font-size: 15px;width: fit-content;height: fit-content;}
+       
+    }
+    
+
+
+    @media (max-width:410px) {
+      #container{background-size: auto 100%;background-color: gray;top: $tmrgn;}
+    }
+    
+    
+    @media (max-width:366px) {
+
+      #container{background-size: auto 100%;background-color: gray;top: $tmrgn;}
+    }
+    
+    @media (max-width:344px) {
+
+    }

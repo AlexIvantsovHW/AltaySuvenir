@@ -1,13 +1,11 @@
 import React from "react";
 import './Product.css'
-import Music from "./Music/Music";
-import { Routes, Route, NavLink} from "react-router-dom";
+import { NavLink} from "react-router-dom";
 import { commonImg } from "../../Common/Data";
-import { render } from '@testing-library/react';
+
 
 
 class Product extends React.Component{
- 
    render(){
     return(
       <div className="Product"> 
@@ -23,7 +21,7 @@ class Product extends React.Component{
   <div className="card">
     <NavLink to='/leather'>
       <div className="front"><img src={commonImg.leather}/>  </div>
-      <div className="back">Кожа</div>
+      <div className="back">Изделия из кожи</div>
     </NavLink> 
   </div>
 
@@ -37,14 +35,14 @@ class Product extends React.Component{
   <div className="card">
     <NavLink to='/obereg'>
       <div className="front"><img src={commonImg.kukla}/></div>
-      <div className="back">Куклы и обереги</div>
+      <div className="back">Куклы,обереги и подвески</div>
     </NavLink> 
   </div>
 
   <div className="card">
     <NavLink to='/tea'>
       <div className='front'><img src={commonImg.honey}/></div>
-      <div className="back">Чай и мед</div>
+      <div className="back">Чай<br/>Масла<br/>Мёд<br/>Орехи<br/>Добавки</div>
     </NavLink> 
   </div>
 
@@ -58,7 +56,7 @@ class Product extends React.Component{
   <div className="card">
     <NavLink to='/mineral'>
       <div className="front"><img src={commonImg.mineral}/></div>
-      <div className="back">Минералы</div>    
+      <div className="back">Изделия из минералов</div>    
     </NavLink> 
   </div>
 

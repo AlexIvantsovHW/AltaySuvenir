@@ -47,15 +47,16 @@ let initialState = {
 const HoneyReducer = (state = initialState, action) => {
   switch (action.type) {
     case SET_IMG: return { ...state,  current_img:action.Img}; 
-    case SET_MODULE:debugger;return { ...state,State:action.state, current_module:action.module,current_img:0}; 
-    case SET_STATE:debugger;return { ...state,state:action.state};
-    case SET_CLEAR:debugger;return {...state=initialState,current_img:action.clear}
+    case SET_MODULE:return { ...state,State:action.state, current_module:action.module,current_img:0}; 
+    case SET_STATE:return { ...state,state:action.state};
+    case SET_CLEAR:return {...state=initialState,current_img:action.clear}
     default:return { ...state };
   }
 };
 
 export const ImgAC=(Img)=>{return{type: SET_IMG,Img }};
-export const moduleAC=(module,state)=>{debugger;return{type:SET_MODULE,module,state}}
-export const stateAC=(state)=>{{debugger;return{type:SET_STATE,state}}}
-export const clearAC=(clear)=>{{debugger;return{type:SET_CLEAR,clear}}}
+export const moduleAC=(module,state)=>{return{type:SET_MODULE,module,state}}
+export const stateAC=(state)=>{{return{type:SET_STATE,state}}}
+export const clearAC=(clear)=>{{return{type:SET_CLEAR,clear}}}
+export const clearHoney=clearAC;
 export default HoneyReducer;

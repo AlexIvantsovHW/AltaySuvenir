@@ -11,14 +11,14 @@
 // top margin for header
 $tmrgn:150px;
 // Font size
-$card-s:150px;
+$card-s:140px;
 
 // color
 $border:black;
 $buttonBG:rgb(86, 85, 85);
 $BG:gray;
 //Paterns
-
+$keff:$card-s*1.1;
 %button{
   button {
     background-color: $buttonBG;
@@ -37,6 +37,8 @@ $BG:gray;
   height: $BodyH;
   width: 100%;
   top: $HeaderH;
+
+ 
     .productContainer{ 
       margin: auto;
       height: 90%;
@@ -54,8 +56,8 @@ $BG:gray;
     .card{
       position: relative;
       margin:5%;
-      width: 160px;
-      height: 160px;
+      width: $keff;
+      height: $keff;
       perspective: 1000px;
       -webkit-transition: 500ms ease-in; /* Safari and Chrome */
       -moz-transition: 500ms ease-in; /* Firefox 4 */
@@ -100,4 +102,39 @@ $BG:gray;
       background-color: #ffffff;
       transform: rotateY(360deg);}
       
+}
+
+@media (max-width:1024px) {
+  .Product .productContainer .card{width: 100px;height:100px ;}
+  .Product .productContainer{margin-top:1.5%;height: min-content;}
+  .Product .front {img {max-width: 100px;height: 100px;}}
+}
+
+
+
+@media (max-width:768px) {
+
+}
+
+@media (max-width:690px) {
+  .Product .productContainer .card{width: 110px;height:110px ;}
+  .Product .productContainer{margin-top:5%;height: min-content;}
+  .Product .front {img {max-width: 110px;height: 110px;}}
+}
+
+@media (max-width:500px) {
+
+}
+
+@media (max-width:410px) {
+
+}
+
+
+@media (max-width:366px) {
+
+}
+
+@media (max-width:344px) {
+
 }

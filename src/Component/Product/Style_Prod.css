@@ -6,7 +6,7 @@
   font-style: normal;
   font-display: swap;
 }
-.music_container .Music .end:hover, .Footer .footer_menu img, .header .logo .logoImg img:hover, .music_container .wallet img, .music_container .wallet button, .music_container .wallet {
+.music_container .Music .end:hover, .Footer .footer_menu img, .music_container .wallet img, .music_container .wallet button, .music_container .wallet {
   -webkit-transition: 500ms ease-in; /* Safari and Chrome */
   -moz-transition: 500ms ease-in; /* Firefox 4 */
   -o-transition: 500ms ease-in;
@@ -17,14 +17,10 @@
   filter: drop-shadow(0 0 2px rgba(0, 246, 0, 0.684));
 }
 
-.header .logo .logoImg img, .header .logo img {
-  z-index: 100;
-  opacity: 100%;
-}
-
-.head_menu .menu_container .btn button {
-  width: 150px;
-  height: 42px;
+.header .head_menu button {
+  width: 100px;
+  height: -moz-fit-content;
+  height: fit-content;
   border-left: solid 2px rgba(255, 255, 255, 0.656);
   border-right: solid 2px rgba(255, 255, 255, 0.656);
   border-top: none;
@@ -37,31 +33,33 @@
   transition: all 250ms ease;
   font-family: "Rurik (viking)";
 }
-.head_menu .menu_container .btn button:before {
+.header .head_menu button:before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 0;
-  height: 42px;
+  height: -moz-fit-content;
+  height: fit-content;
   background: rgba(255, 255, 255, 0.407);
   transition: all 1000ms ease;
 }
-.head_menu .menu_container .btn button:after {
+.header .head_menu button:after {
   content: "";
   position: absolute;
   top: 0;
   right: 0;
   width: 0;
-  height: 42px;
+  height: -moz-fit-content;
+  height: fit-content;
   background: rgba(255, 255, 255, 0.407);
   transition: all 1000ms ease;
   font-family: ff_head;
 }
-.head_menu .menu_container .btn button:hover:before, .head_menu .menu_container .btn button:hover::after {
+.header .head_menu button:hover:before, .header .head_menu .btn button:hover::after {
   width: 50%;
 }
-.head_menu .menu_container .btn button:hover {
+.header .head_menu button:hover {
   border: none rgba(255, 0, 0, 0);
   transition: all 250ms ease;
 }
@@ -82,7 +80,6 @@ body {
   width: 100vw;
   height: 100vh;
   place-content: center;
-  background-color: black;
 }
 
 .container {
@@ -120,35 +117,13 @@ body {
   width: 100px;
   height: 100px;
 }
-.header .logo .logoImg img {
-  width: 100px;
-  height: 100px;
-}
-.header .logo .logoImg img:hover {
-  filter: drop-shadow(0 0 10px black);
-  transition: 500ms ease-in;
-}
-.header .logo .logoImg {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 2.5%;
-  width: 250px;
-  height: 100px;
-}
-
-.head_menu {
+.header .head_menu {
   font-family: ff_head;
+  width: 100%;
+  height: 100px;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 100%;
-  height: 100%;
-}
-.head_menu .menu_container {
-  margin: 0 10%;
-  width: 100px;
-  height: 50px;
 }
 
 .Body {
@@ -177,9 +152,9 @@ body {
 }
 
 .Footer {
+  position: fixed;
   display: flex;
   justify-content: space-between;
-  position: fixed;
   color: white;
   width: 100vw;
   height: 50px;
@@ -220,6 +195,31 @@ body {
   filter: brightness(120%);
 }
 
+@media (max-width: 500px) {
+  .header .logo .logoImg {
+    display: flex;
+    justify-content: flex-start;
+    width: 50px;
+  }
+  .header .head_menu {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .header .head_menu button {
+    font-size: 15px;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+.container {
+  background-size: 350px auto;
+}
+
 @font-face {
   font-family: "Rurik (viking)";
   src: url("Rurikviking-Regular.eot");
@@ -228,7 +228,7 @@ body {
   font-style: normal;
   font-display: swap;
 }
-.head_menu .menu_container button {
+.header .head_menu button {
   background-color: rgb(86, 85, 85);
   font-size: 20px;
   width: 100px;
@@ -236,7 +236,7 @@ body {
   border-bottom: solid 0.5px gray;
   border-top: solid 0.5px gray;
 }
-.head_menu .menu_container button:hover {
+.header .head_menu button:hover {
   background-color: red;
 }
 
@@ -257,17 +257,14 @@ body {
   text-shadow: 0 1px 0 #333333;
   border: solid rgba(128, 128, 128, 0);
   border-radius: 50px;
-  position: relative;
   display: grid;
-  grid-template-columns: 0.9fr 0.9fr 15px;
+  grid-template-columns: 0.7fr 1fr 10px;
+  grid-template-areas: "img text end";
   width: 90%;
-  height: 90%;
+  height: 95%;
 }
 .music_container .Music .end {
-  position: absolute;
-  top: 5px;
-  margin-left: 95%;
-  display: grid;
+  grid-area: "end";
   cursor: pointer;
 }
 .music_container .Music .end img {
@@ -279,8 +276,8 @@ body {
   filter: drop-shadow(0 0 1px white);
 }
 .music_container .Music .img {
-  position: relative;
   display: grid;
+  grid-area: "img";
   grid-template-rows: 4fr 0.5fr;
   width: 100%;
   height: 100%;
@@ -308,7 +305,7 @@ body {
   height: 100%;
 }
 .music_container .Music .img img {
-  height: 400px;
+  height: 380px;
   filter: drop-shadow(0 0 10px rgb(245, 245, 245));
 }
 .music_container .Music .img .curr_img_butt {
@@ -342,16 +339,17 @@ body {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-  height: 90%;
+  height: 96%;
   text-align: center;
   display: grid;
+  grid-area: "text";
   grid-template-rows: 0.5fr 0.5fr 3fr 0.5fr;
-  width: 90%;
+  width: 100%;
   border-radius: 5%;
 }
 .music_container .Music .text .description {
   text-indent: 25px;
-  padding: 0 10% 2% 10%;
+  padding: 0 5% 2% 5%;
   height: 100%;
   text-align: justify;
 }
@@ -419,7 +417,7 @@ body {
 }
 .music_container .price {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 0.5fr 1fr;
   text-align: left;
   cursor: default;
 }
@@ -436,7 +434,7 @@ body {
   align-items: center;
 }
 .music_container .price .buy .buy_cont {
-  margin-left: 35%;
+  margin-left: 10%;
 }
 .music_container .price .buy .buy_cont p {
   font-weight: lighter;
@@ -463,4 +461,179 @@ body {
   width: 100%;
   height: 100%;
   cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .music_container .Music .img img {
+    height: 310px;
+  }
+  .music_container .Music .text .item .sub_button {
+    width: 100%;
+  }
+  .music_container .Music .text .item .sub_button button {
+    font-size: 12px;
+  }
+  .music_container .Music .text .item .button button {
+    font-size: 12px;
+  }
+  .music_container .Music .text {
+    font-size: 10px;
+  }
+  .music_container .Music .text .item {
+    font-size: 15px;
+  }
+  .music_container .Music .text .description h1 {
+    font-size: 15px;
+  }
+  .music_container .Music .text .description h2 {
+    font-size: 14px;
+  }
+  .music_container .Music .text .description table {
+    font-size: 12px;
+  }
+  .music_container .price .buy_cont {
+    font-size: 11px;
+    width: 100%;
+    text-align: right;
+  }
+}
+@media (max-width: 768px) {
+  .music_container .Music .img img {
+    height: 220px;
+  }
+  .music_container .Music .text .description table {
+    font-size: 13px;
+  }
+}
+@media (max-width: 690px) {
+  .music_container .Music {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .music_container .Music .text .item .sub_button {
+    width: 100%;
+  }
+  .music_container .Music .text .item .sub_button button {
+    font-size: 11px;
+  }
+  .music_container .Music .text .item .button button {
+    font-size: 11px;
+  }
+  .music_container .Music .end {
+    order: -1;
+    height: 10px;
+    padding-left: 90%;
+  }
+  .music_container .Music .text {
+    font-size: 10px;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 95%;
+    margin-bottom: 2.5%;
+    margin-top: 2.5%;
+  }
+  .music_container .Music .img {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .music_container .Music .img img {
+    height: 150px;
+  }
+  .music_container .Music .text .item {
+    font-size: 13px;
+  }
+  .music_container .Music .text .description h1 {
+    font-size: 13px;
+  }
+  .music_container .Music .text .description h2 {
+    font-size: 12px;
+  }
+  .music_container .Music .text .description table {
+    font-size: 12px;
+  }
+  .music_container .price .buy_cont {
+    font-size: 11px;
+    width: 100%;
+    text-align: right;
+  }
+  .music_container .wallet {
+    padding-left: 2%;
+  }
+  .music_container .wallet img {
+    width: 30px;
+    height: 30px;
+  }
+  .music_container .buy {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+@media (max-width: 500px) {
+  .music_container .Music {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .music_container .Music .text .item .sub_button {
+    width: 100%;
+  }
+  .music_container .Music .text .item .sub_button button {
+    font-size: 11px;
+  }
+  .music_container .Music .text .item .button button {
+    font-size: 11px;
+  }
+  .music_container .Music .end {
+    order: -1;
+    height: 10px;
+    padding-left: 85%;
+  }
+  .music_container .Music .text {
+    font-size: 13px;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 95%;
+    margin-bottom: 2.5%;
+    margin-top: 2.5%;
+  }
+  .music_container .Music .img {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .music_container .Music .img img {
+    height: 135px;
+  }
+  .music_container .Music .text .item {
+    font-size: 13px;
+  }
+  .music_container .Music .text .description h1 {
+    font-size: 13px;
+  }
+  .music_container .Music .text .description h2 {
+    font-size: 12px;
+  }
+  .music_container .Music .text .description table {
+    font-size: 12px;
+  }
+  .music_container .price .buy_cont {
+    font-size: 11px;
+    width: 100%;
+    text-align: right;
+  }
+  .music_container .wallet {
+    padding-left: 2%;
+  }
+  .music_container .wallet img {
+    width: 30px;
+    height: 30px;
+  }
+  .music_container .buy {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
 }/*# sourceMappingURL=Style_Prod.css.map */

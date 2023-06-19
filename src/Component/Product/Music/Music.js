@@ -118,7 +118,7 @@ return (
       </div>
         <div className="item">{name.toUpperCase()}</div>
         <div className="description">
-          <h1>Описание</h1>
+         <div className='desc_text'> <h1>Описание</h1></div>
         <h2>{Desc}</h2>
         {Table}
         </div>

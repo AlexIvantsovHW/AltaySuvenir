@@ -5,9 +5,6 @@ import { NavLink } from "react-router-dom";
 
 
 const CameL = (props) => {
-  debugger;
-
-
   let page_Items=Camel_Items // Менять
   let [item_1,dict_1]=[Camel[0],CamelDict] // Менять
   let pWay=props.camel// менять

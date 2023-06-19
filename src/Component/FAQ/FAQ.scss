@@ -20,10 +20,11 @@
     position: relative;
     display: grid; 
     grid-template-columns: 1fr 1fr;
-    width: $PgWh;
+    width: 70%;
     height: 90%; 
     font-family:$ff;
     .faqImg{ 
+      
       margin: auto;
       position: relative;
       display: flex;
@@ -53,8 +54,8 @@
         }
       img{
         @extend %imgSetting;
-        width: 90%;
-        height: 90%;
+        width: 400px;
+        height: 400px;
         -webkit-transition: $duration ease-in; /* Safari and Chrome */
         -moz-transition: $duration ease-in; /* Firefox 4 */
         -o-transition: $duration ease-in;
@@ -76,7 +77,7 @@
       height: 80%; 
       text-align: center;
       display: grid;
-      grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr  0.5fr;
+      grid-template-rows: 0.5fr 0.5fr 0.5fr;
       width: 90%;
       border-radius: 5%;
       h4{font-size: $head_fz;};
@@ -90,3 +91,88 @@
         .subText_2 h2{font-size: $h2_fz; font-weight: lighter;}
       }
 }
+$imgS:100%;
+$imgS_400:100px;
+
+// Landscape
+     @media (max-width:1024px) {
+      .faqContainer{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        }
+      .faqContainer .faqImg{height: 70%;}
+      .faqContainer .faqImg img {width: $imgS;height:$imgS;} 
+      .faqText h4{font-size: $head_fz_1024;}
+      @media (max-height:610px){
+        .faqContainer{
+          width: 90%;
+          display: grid;
+          grid-template-columns: 0.7fr 1fr;
+          grid-template-rows: 1fr;
+          grid-column-gap: 0px;
+          grid-row-gap: 0px;
+          }
+          .faqText h4{font-size: $head_fz_768;}
+          
+      }
+    }
+  
+    @media (max-width:768px) {
+      .faqContainer{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        }
+      .faqContainer .faqImg img {width: $imgS;height:$imgS;} 
+      .faqText h4{font-size: $head_fz_768;}
+      @media (max-height:530px){
+        .faqContainer{
+          display: grid;
+          grid-template-columns: 0.7fr 1fr;
+          grid-template-rows: 1fr;
+          grid-column-gap: 0px;
+          grid-row-gap: 0px;
+          }
+          .faqContainer .faqImg img {width: $imgS;height:$imgS;} 
+      .faqText h4{font-size: $head_fz_768;}
+      }
+    }
+    @media (max-width:690px) {.faqText h4{font-size: $head_fz_690;} 
+    @media (max-height:530px){
+      .faqContainer{
+        display: grid;
+        grid-template-columns: 0.7fr 1fr;
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        }
+        .faqContainer .faqImg img {width: $imgS;height: $imgS;} 
+    .faqText h4{font-size: $head_fz_400;}
+      }
+  }
+    @media (max-width:500px) {
+      .faqText h4{font-size: $head_fz_500;}
+      @media (max-height:470px){
+        .faqContainer{
+          display: grid;
+          grid-template-columns: 0.7fr 1fr;
+          grid-template-rows: 1fr;
+          grid-column-gap: 0px;
+          grid-row-gap: 0px;
+          }
+          .faqContainer .faqImg img {width: $imgS_400;height:$imgS_400;} 
+      .faqText h4{font-size: $head_fz_400;}
+      .faqText h2{font-size: $h2_fz_400;color: white; text-decoration: none};
+      .faqText h3{font-size: $h3_fz_400;};
+        }
+    }
+    @media (max-width:410px) {}
+    @media (max-width:366px) {}
+    @media (max-width:344px) {}
+
+// Portrait

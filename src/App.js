@@ -11,7 +11,6 @@ import Deliver from "./Component/Footer/Deliver/Deliver";
 import Partner from "./Component/Footer/Partner/Partner";
 import MusicContainer from "./Component/Product/Music/MusicContainer";
 import FAQ from "./Component/FAQ/FAQ";
-import { compose } from "react-compose";
 import LeatherContainer from './Component/Product/Leather/LeatherContainer';
 import Header from './Component/Header/Header';
 import TotemContainer from "./Component/Product/Totem/TotemContainer";
@@ -24,8 +23,9 @@ import MaskContainer from './Component/Product/Mask/MineralContainer';
 
 
 const App = () => {
+  
   return (
-    <div className="container">
+    <div className="container" id='container'>
      <Header/>
      <Routes>
             <Route path="/mainPage" element={<MainPage />} />

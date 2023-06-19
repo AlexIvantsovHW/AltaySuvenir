@@ -6,7 +6,7 @@ const MainPage = () => {
     <div className="Body">
       <div className="BodyContainer">
       <div className="containerText">
-        <h1>Магазин сувениров -
+        <h1 id='mainText'>Магазин сувениров -
         Домик Шамана
         </h1>
         
